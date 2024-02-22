@@ -21,6 +21,7 @@ d.setdefault('four',4)
 print(d)
 
 # 3.pop(),popitem() 메서드
+# popitem()은 키,값 둘다 나옴
 print(d.popitem())
 key,value=d.popitem()
 print(f"key={key},value={value}")
