@@ -52,7 +52,7 @@ print(f'remove 전 {c})')
 c.remove('강감찬')
 print(f'c.remove("강감찬") 후 {c})')
 
-#9. etend() : 리스트에 리스트를 추가(확장)
+#9. extend() : 리스트에 리스트를 추가(확장)
 #하나의 리스트로 변경
 print(f'blist {b}')
 b.extend([10,11,12])
