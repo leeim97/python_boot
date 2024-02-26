@@ -42,8 +42,42 @@ print(add(20))
 print(add(10,50))      #포지션널 인자
 print(add(y=10,x=500)) #키워드 인자
 
-# 람다 표현식 : 함수 이름 명명하지 않고 바로 호출
+# 람다 표현식 : 함수 이름 명명하지 않고
+# 즉, 변수에 할당하지 않고(위처럼f에) 바로 호출
 #(lambda <인수들>:식)(인수들)
 
 print((lambda x:x+10)(10))
 
+# 람다표현식 안에서는 변수 생성 불가 :SyntaxError
+# f = lambda x : y=10,x+y #y가 표현식에서 있으니 오류
+
+def plus_ten(x):
+    return x + 10
+
+# [1,2,3,4,5] 에 동일하게 10을 더하는
+#  것에 람다를 사용해보자
+
+# new=[]
+# # 기존 방법
+# for n in [1,2,3,4,5]:
+#     new.append(n+10)
+
+#map을 사용 map(func,리터럴들)
+print(list(map(plus_ten,[1,2,3,4,5])))
+print(list(map(lambda x:x+10,[1,2,3,4,5])))
+
+# 두 개의 리스트 요소 더하기
+
+def add_list(x,y):
+    new_list=[]
+    for i in range(len(x)):
+        new_list.append(x[i]+y[i])
+
+    return new_list
+a=[1,2,3,4]
+b=[10,11,12,13]
+print(add_list(a,b))
+
+#map(func,iterable_data)함수
+
+print(list(map(lambda x,y:x+y,a,b)))

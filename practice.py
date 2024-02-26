@@ -1,1 +1,5 @@
-print(type((1)))
+text='asdfnASDNMASDasdf'
+
+
+print(text.strip('a'))
+print(text)

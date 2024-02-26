@@ -1,0 +1,1 @@
+ANSI로 저장하면 encoding='utf-8'안해도됌
