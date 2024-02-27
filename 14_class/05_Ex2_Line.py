@@ -30,7 +30,7 @@ class Line():
     def __eq__(self, other):
         return self.length == other.length
 
-    def __neg__(self,other):
+    def __ne__(self,other):
         return self.length != other.length
 
 line1 = Line(10)
@@ -38,9 +38,9 @@ line2 = Line(20)
 # del(line1)
 print(line1)
 print(line2)
-print(line1 + line2)# + 쓰면 __add__가 자동 실행됌
-print(line1 - line2)# - 쓰면 __add__가 자동 실행됌
-print(line1 > line2)# > 쓰면 __add__가 자동 실행됌
+print(line1 + line2)# 객체,+ 쓰면 __add__가 자동 실행됌
+print(line1 - line2)# - 쓰면 __sub__가 자동 실행됌
+print(line1 > line2)# > 쓰면 __gt__가 자동 실행됌
 print(line1 < line2)
 
 if line1 > line2:

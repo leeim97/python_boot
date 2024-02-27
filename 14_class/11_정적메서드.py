@@ -4,7 +4,7 @@
 # 메서드 위에 @staticmethod 키워드를 지정하여 정의
 
 class Calc:
-    @staticmethod #이거 적용한 함수는 self안나옴
+    @staticmethod #이거 적용한 함수는 자동으로 나오던 self가 안나옴
     def add(a,b):
         print(a+b)
 
@@ -12,8 +12,10 @@ class Calc:
     def sub(a,b):
         print(a-b)
 
-myCal = Calc()
-myCal.add(10,20)
+# myCal = Calc()
+# myCal.add(10,20)
+
+
 # 정적메소드(staticmethod)를 썻기때문에
 # 인스턴스를 만들지않고
 # 메서드를 바로 사용가능

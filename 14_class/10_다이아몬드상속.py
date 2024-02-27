@@ -20,7 +20,7 @@ obj=D()
 obj.greeting()
 
 # 다이아몬드 상송 : 서로 다른 클래스에서 동일한 메서드를 상속받는 경우
-# 메서드를 탐색하는 순서 : (Method Resolution Order : MRD)
+# 메서드를 탐색하는 순서 : (Method Resolution Order : MRO)
 # 클래스 다중 상속의 왼쪽에서 오른쪽 순서로 메서드 탐색
 
 print(D.mro())

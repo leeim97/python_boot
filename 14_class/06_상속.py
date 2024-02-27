@@ -12,6 +12,7 @@ class Car(object):
 
 class Truck(Car):
     def __init__(self,speed,color,load):
+        #Car.__init__(spped,color) 처럼 직접 상속받을 클래스 이름 언급해도됌
         super().__init__(speed,color) # 이 문장을 반드시 먼저써야됌
         self.load = load
 
@@ -28,3 +29,24 @@ car1 = Car()
 truck1 = Truck(0,'blue',5)
 car1.drive()
 truck1.drive()
+
+# 아래 코드 보면 super().안쓰고 클래쓰 이름 써서 상속받음
+'''
+class Person:
+    def __init__(self, name, age, position):
+       self.Name = name
+        self.Age = age
+        self.Position = position
+    def show_info(self):
+        print('이름 : {}'.format(self.Name))
+        print('나이 : {}'.format(self.Age))
+        print('직위 : {}'.format(self.Position))
+        print("저는 {0} {1}입니다. 나이는 {2}입니다.".format(self.Position, self.Name, self.Age))
+class Researcher(Person):
+    def __init__(self, name, age, position, degree):
+        Person.__init__(self,name, age, position)
+        self.Degree = degree
+    def show_info(self):
+        Person.show_info(self)
+        print("저는 {} 입니다.".format(self.Degree))
+'''
