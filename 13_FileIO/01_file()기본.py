@@ -10,7 +10,7 @@
 # a+는 읽고 추가하기
 
 # 2단계 : 파일 처리 => 읽기 / 쓰기
-# 파일객체.read()
+# 파일객체.read()    ,readline(),readlines()
 # 파일객체.write()
 
 # 3단계 : 파일 닫기(close)
